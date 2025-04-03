@@ -1,11 +1,11 @@
 import streamlit as st
 import requests
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 # Load environment variables
-load_dotenv()
-PASSWORD = os.getenv("PAYMENT_PASSWORD")  # Fetch password from environment variable
+#load_dotenv()
+#PASSWORD = os.getenv("PAYMENT_PASSWORD")  # Fetch password from environment variable
 
 # FastAPI Backend URL
 API_URL = "http://127.0.0.1:8000/submit-payment/"
@@ -20,7 +20,7 @@ tag = st.selectbox("Select Batch", ["HSC26", "HSC25", "SSC26", "SSC27"])
 password = st.text_input("Enter Password", type="password")  # Password input
 
 if st.button("Submit Payment"):
-    if password == PASSWORD:  # Securely validate password
+    if password == "sirius45":  # Securely validate password
         # Prepare request payload
         data = {
             "teacher_name": teacher_name,
@@ -43,6 +43,8 @@ if st.button("Submit Payment"):
 # streamlit run app.py
 # pip3 install streamlit requests pandas
 # source venv/bin/activate  
-# pip3 freeze > requirements.tx
+# pip3 freeze > requirements.txt
 # pip3 install --upgrade pip
+# pip3 install python-dotenv
+
 # pip3 install python-dotenv
