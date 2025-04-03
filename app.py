@@ -9,7 +9,7 @@ import os
 
 # FastAPI Backend URL
 # API_URL = "http://127.0.0.1:8000/submit-payment/"
-API_URL = "https://siriuspayment47.streamlit.app/"
+API_URL = "https://backend-sirius-payment.vercel.app/submit-payment/"
 
 st.title("Sirius Academy Payment System 💰")
 
