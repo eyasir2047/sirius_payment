@@ -8,7 +8,8 @@ import os
 #PASSWORD = os.getenv("PAYMENT_PASSWORD")  # Fetch password from environment variable
 
 # FastAPI Backend URL
-API_URL = "http://127.0.0.1:8000/submit-payment/"
+# API_URL = "http://127.0.0.1:8000/submit-payment/"
+API_URL = "https://sirius-payment.vercel.app/"
 
 st.title("Sirius Academy Payment System 💰")
 
