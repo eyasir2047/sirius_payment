@@ -1,3 +1,4 @@
+
 import streamlit as st
 import requests
 import os
@@ -5,10 +6,10 @@ import os
 
 # Load environment variables
 #load_dotenv()
-#PASSWORD = os.getenv("PAYMENT_PASSWORD")  # Fetch password from environment variable
-
+#PAYMENT_PASSWORD = os.getenv("PAYMENT_PASSWORD")  # Fetch password from environment variable
+PAYMENT_PASSWORD = st.secrets["PAYMENT_PASSWORD"]
 # FastAPI Backend URL
-# API_URL = "http://127.0.0.1:8000/submit-payment/"
+#API_URL = "http://127.0.0.1:8000/submit-payment/"
 API_URL = "https://backend-sirius-payment.vercel.app/submit-payment/"
 
 st.title("Sirius Academy Payment System 💰")
@@ -21,7 +22,7 @@ tag = st.selectbox("Select Batch", ["HSC26", "HSC25", "SSC26", "SSC27"])
 password = st.text_input("Enter Password", type="password")  # Password input
 
 if st.button("Submit Payment"):
-    if password == "sirius45":  # Securely validate password
+    if password == PAYMENT_PASSWORD :  # Securely validate password
         # Prepare request payload
         data = {
             "teacher_name": teacher_name,
