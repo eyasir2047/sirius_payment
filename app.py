@@ -11,8 +11,8 @@ PAYMENT_PASSWORD = st.secrets["PAYMENT_PASSWORD"]
 # FastAPI Backend URL
 #API_URL = "http://127.0.0.1:8000/submit-payment/"
 API_URL = "https://backend-sirius-payment.vercel.app/submit-payment/"
-
-st.title("Sirius Academy Payment System 💰")
+st.image("logo_sirius.jpeg", width=200)
+st.title("Sirius Academy Payment System")
 
 # Input Fields
 teacher_name = st.text_input("Teacher Name")
