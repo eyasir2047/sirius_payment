@@ -15,7 +15,8 @@ API_URL = "https://backend-sirius-payment.vercel.app/submit-payment/"
 st.title("Sirius Academy Payment System")
 
 # Input Fields
-teacher_name = st.text_input("Teacher Name")
+#teacher_name = st.text_input("Teacher Name")
+teacher_name = st.selectbox("Select Teacher", ["Abrar", "Hamja", "Araf","Rumman","Kuresh","Tanvir","Safat","Nafiz","Sakib","Junayed","Sajid"])
 student_name = st.text_input("Student Name")
 amount = st.number_input("Amount", min_value=0.0, value=3000.0, step=100.0, format="%.2f")
 tag = st.selectbox("Select Batch", ["HSC26", "HSC25", "SSC26", "SSC27"])
